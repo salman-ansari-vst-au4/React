@@ -7,4 +7,4 @@ In the project directory, you can run:
 ### `npm i`
 ### `npm start`
 
-### Hosting:https://app.netlify.com/sites/todo-app-salman
+Website Link: https://app.netlify.com/sites/todo-app-salman
