@@ -7,4 +7,4 @@ In the project directory, you can run:
 ### `npm i`
 ### `npm start`
 
-Website Link: https://app.netlify.com/sites/todo-app-salman
+# [Project Link](https://salman-react-todo-app.netlify.com)
