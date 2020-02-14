@@ -78,7 +78,7 @@ class Wrapper extends Component {
       // this.state.todo[this.state.indexToUpdate] = data;
     }
 
-    
+
   }
 
   filter(value) {
@@ -89,7 +89,7 @@ class Wrapper extends Component {
 
   list() {
     return (
-      <div className="border shadow w-50 mx-auto bg-white p-2 rounded">
+      <div className="border shadow mx-auto bg-white rounded">
         <ul className="list-group list-group-flush">
           {this.state.todo.map((data, index) => {
 
@@ -149,25 +149,29 @@ class Wrapper extends Component {
         <header className="bg-white p-1 shadow mb-4">
           <p className="display-4 text-center mb-0">Todo List</p>
         </header>
-        <Input
-          getTodoData={data => this.getFormData(data)}
-          todoEdit={this.state.editTodo}
-          getUpdatedData={data => this.update(data)} />
-        <div className=" w-50 mx-auto pb-3">
-          <div class="btn-group dropright float-right">
-            <button type="button" className="btn text-secondary pr-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i className="fa fa-sliders-h" />
-            </button>
-            <div className="dropdown-menu">
-              <a className="dropdown-item" onClick={() => this.filter(null)}>All</a>
-              <a className="dropdown-item" onClick={() => this.filter(true)}>Completed</a>
-              <a className="dropdown-item" onClick={() => this.filter(false)}>Active</a>
-            </div>
-          </div>
+        <div className="row m-0">
+          <Input
+            getTodoData={data => this.getFormData(data)}
+            todoEdit={this.state.editTodo}
+            getUpdatedData={data => this.update(data)} />
+          <div className="col-md-8">
+            <div className="pb-3">
+              <div class="btn-group dropright float-right">
+                <button type="button" className="btn text-secondary pr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i className="fa fa-sliders-h" />
+                </button>
+                <div className="dropdown-menu">
+                  <a className="dropdown-item" onClick={() => this.filter(null)}>All</a>
+                  <a className="dropdown-item" onClick={() => this.filter(true)}>Completed</a>
+                  <a className="dropdown-item" onClick={() => this.filter(false)}>Active</a>
+                </div>
+              </div>
 
-        </div><br />
-        {this.state.todo.length ? this.list() : ""}
-      </div >
+            </div><br />
+            {this.state.todo.length ? this.list() : ""}
+          </div >
+        </div>
+      </div>
     )
   }
 }

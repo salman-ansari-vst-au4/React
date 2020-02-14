@@ -59,42 +59,44 @@ class Input extends React.Component {
 
     render() {
         return (
-            <form className="mb-4">
-                <div className="">
-                    <div className="mx-auto w-25 m-1">
-                        <input
-                            type="text"
-                            value={this.state.todo}
-                            className="form-control shadow-sm"
-                            placeholder="Task"
-                            onChange={event => { this.addTodo(event.target.value) }} />
+            <div className="col-md-4 mt-4 pt-3">
+                <form className="mb-4">
+                    <div className="">
+                        <div className="mx-auto w-100 m-1">
+                            <input
+                                type="text"
+                                value={this.state.todo}
+                                className="form-control shadow-sm"
+                                placeholder="Task"
+                                onChange={event => { this.addTodo(event.target.value) }} />
+                        </div>
+                        <div className="mx-auto w-100 m-1">
+                            <input
+                                type="date"
+                                min={this.date()}
+                                value={this.state.date}
+                                className="form-control shadow-sm"
+                                onChange={event => { this.addDate(event.target.value) }}
+                                placeholder="Email" />
+                        </div>
+                        <div className="mx-auto w-25 m-1 pt-1 text-center">
+                            <button
+                                type="button"
+                                className="btn btn-info "
+                                onClick={e => {
+                                    e.preventDefault();
+                                    if (this.state.isEdit) {
+                                        this.updateForm();
+                                    } else {
+                                        this.submitForm();
+                                    }
+                                }}>
+                                {this.state.isEdit ? "Update" : "Add"}
+                            </button>
+                        </div>
                     </div>
-                    <div className="mx-auto w-25 m-1">
-                        <input
-                            type="date"
-                            min={this.date()}
-                            value={this.state.date}
-                            className="form-control shadow-sm"
-                            onChange={event => { this.addDate(event.target.value) }}
-                            placeholder="Email" />
-                    </div>
-                    <div className="mx-auto w-25 m-1 pt-1 text-center">
-                        <button
-                            type="button"
-                            className="btn btn-info "
-                            onClick={e => {
-                                e.preventDefault();
-                                if (this.state.isEdit) {
-                                    this.updateForm();
-                                } else {
-                                    this.submitForm();
-                                }
-                            }}>
-                            {this.state.isEdit ? "Update" : "Add"}
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         );
     }
 }

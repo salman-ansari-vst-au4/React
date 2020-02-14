@@ -33,7 +33,7 @@ class List extends React.Component {
                 < button className="btn  m-1 pt-1 px-2 float-right" onClick={() => this.props.deleteIndex(this.props.index)}>
                     <i className="far fa-trash-alt text-danger" />
                 </button>
-                < button className="btn  m-1 pt-1 px-2 float-right" onClick={() => this.props.editIndex(this.props.index)}>
+                < button className="btn  m-1 pt-1 px-1 float-right" onClick={() => this.props.editIndex(this.props.index)}>
                     <i className="far fa-edit text-info" />
                 </button>
             </li>
