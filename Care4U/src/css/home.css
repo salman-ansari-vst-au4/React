@@ -1,0 +1,33 @@
+body {
+  background-image: url('https://cdn.dribbble.com/users/1355613/screenshots/6637974/doctor.jpg');
+  /* height: 20px; You must set a specified height */
+  background-position: top; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 800px; 
+}
+
+/* main img {
+  
+  min-width: 450px;
+} */
+
+article {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.card img {
+  width: 100%; 
+}
+
+.card-group {
+  margin: 290px 200px 0px 200px;
+}
+
+.card-deck {
+  margin: 290px 200px 0px 200px;
+}
+
+.homecard {
+  cursor: pointer;
+}
