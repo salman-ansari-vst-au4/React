@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Todo App",
+    "slug": "todo-app",
+    "privacy": "public",
+    "sdkVersion": "36.0.0",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.lingonsaft.myapp",
+      "versionCode": 1,
+      "icon": "https://cdn4.iconfinder.com/data/icons/ios-web-user-interface-multi-circle-flat-vol-4/512/Check_check_marks_list_checklist_documents_todo_list-512.png"
+    }
+  }
+}
