@@ -7,6 +7,18 @@ import Product from './Component/Product'
 import Order from './Component/Order'
 
 class App extends Component {
+  state = {
+    song: []
+  }
+
+  componentDidMount = async () => {
+    let song = await fetch('http://localhost:8008/song/join')
+    song = await song.json()
+    console.log(song.table[0])
+    this.setState({
+      song: [...this.state.song, song.table[0]]
+    })
+  }
 
   total = () => {
     let sum = this.props.cart.reduce((total, value) => {
@@ -63,6 +75,11 @@ class App extends Component {
               </div>
             </div>
           </div>
+          <h1>{this.state.song.map((data) => {
+            return(
+              data
+            )
+          })}</h1>
         </Route>
 
         {/* Users Page */}
